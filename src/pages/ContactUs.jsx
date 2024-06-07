@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import { Field, Form, Formik } from 'formik';
 import { Label } from 'flowbite-react';
 import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
 
 function ContactUs() {
   const formRef = useRef();
@@ -65,7 +66,7 @@ function ContactUs() {
                       'bFnjs1Dbpzqq4_vYt'
                     );
                     console.log(result.text);
-                    alert("Message sent successfully!");
+                    toast.success("Submitted Successfully")
                     resetForm();
                   } catch (error) {
                     console.error(error.text);

@@ -13,12 +13,14 @@ import ManageVehicles from './pages/admin/ManageVehicles';
 import CreateUser from './pages/admin/CreateUser';
 import ContactQueries from './pages/admin/ContactQueries';
 import BookingHistory from './pages/BookingHistory';
-
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
   return (
     <div className="App">
+       <ToastContainer />
       <BrowserRouter>
       <Routes>
         <Route path='/' element={<Index/>} />
